@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GEOG 328 LAB 02 EXAMPLE</title>
+
+    <!-- Including the main.css file for styling -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Including the Font Awesome CSS library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <div class="topnav" id="myTopnav">
+        <!-- Active link pointing to the index.html page -->
+        <a class="active" href="index.html">Iranian Spider-Tailed Viper</a>
+
+        <!-- Links to other sections -->
+        <a href="section1.html">Section 1</a>
+        <a href="section2.html">Section 2</a>
+        <a href="section3.html">Section 3</a>
+
+        <!-- Additional links -->
+        <a href="see_also.html">See Also</a>
+        <a href="references.html">References</a>
+
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links on smaller screens -->
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+        <!-- Abstract section -->
+        A short description / abstract of the topic you choose. For the text here and below, feel 
+        free to use bold and italic fonts, linked texts, images, or any other element you think would be helpful 
+        for your audience to understand the topic
+        <br>
+        <br>
+        <!-- Displaying the course cover image in a scaled size -->
+        <br>
+        <!-- Slideshow -->
+        <section aria-label="Image slideshow" class="slideshow-section">
+        <div class="slideshow-container" id="slideshow">
+            <div class="slide fade">
+            <img src="https://cdn.discovermagazine.com/assets/image/15210/SpiderTailViper-x.jpg" alt="Viper coiled on rock">
+            <div class="caption">Spider-tailed viper</div>
+            </div>
+            <div class="slide fade">
+            <img src="https://c02.purpledshub.com/uploads/sites/62/2024/09/Spider-tailed-horned-viper-Pseudocerastes-urarachnoides.jpeg" alt="Close-up of viper tail">
+            <div class="caption">Tail mimics insects</div>
+            </div>
+            <div class="slide fade">
+            <img src="https://www.bibleplaces.com/wp-content/uploads/2018/12/Abolhayat-pass-in-Zagros-mountains-route-of-Alexander-the-Great-tb0507181683.jpg" alt="Viper in natural habitat">
+            <div class="caption">Natural habitat</div>
+            </div>
+
+            <!-- Controls -->
+            <button class="prev" aria-label="Previous slide" onclick="plusSlides(-1)">❮</button>
+            <button class="next" aria-label="Next slide" onclick="plusSlides(1)">❯</button>
+        </div>
+
+        <!-- Dots / indicators -->
+        <div class="dots" role="tablist" aria-label="Slide dots">
+            <button class="dot" aria-label="Show slide 1" onclick="currentSlide(1)"></button>
+            <button class="dot" aria-label="Show slide 2" onclick="currentSlide(2)"></button>
+            <button class="dot" aria-label="Show slide 3" onclick="currentSlide(3)"></button>
+        </div>
+        </section>
+        <br>
+        <br>
+        <h2>Example Zebra Table</h2>
+        <table class="zebra" aria-describedby="zebra-desc">
+        <caption id="zebra-desc">Example table showing population and area.</caption>
+        <thead>
+            <tr>
+            <th>Area</th>
+            <th>Middleast</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td data-label="Weight">Weight</td>
+            <td data-label="Weight1">2kg</td>
+            </tr>
+            <tr>
+            <td data-label="Length">Length</td>
+            <td data-label="Population">0.8m</td>
+            </tr>
+            <!-- add more rows as needed -->
+        </tbody>
+</table>
+
+    <!-- Including the main.js file for JavaScript functionality -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

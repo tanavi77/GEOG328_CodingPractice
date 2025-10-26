@@ -1,0 +1,241 @@
+/* Add a black background color to the top navigation */
+table.zebra {
+  border-collapse: collapse;
+  width: 60%;
+  margin-top: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table.zebra th,
+table.zebra td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Zebra striping */
+table.zebra tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Header styling */
+table.zebra thead th {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+}
+
+/* Hover effect */
+table.zebra tbody tr:hover {
+  background-color: #eef6f9;
+}
+
+.topnav {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 900px;
+  margin: 1rem auto;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #222;
+  background: rgba(255,255,255,0.9);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Controls */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.prev { left: 8px; }
+.next { right: 8px; }
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 8px;
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot.active {
+  background-color: #717171;
+}
+
+/* Simple fade animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 600ms;
+  animation-name: fade;
+  animation-duration: 600ms;
+}
+@-webkit-keyframes fade { from {opacity: .4} to {opacity: 1} }
+@keyframes fade { from {opacity: .4} to {opacity: 1} }
+
+/* Small accessibility helper: focus styles for keyboard users */
+.prev:focus, .next:focus, .dot:focus {
+  outline: 3px solid #66aaff;
+  outline-offset: 2px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #ffffff44;
+  color: white;
+}
+
+/* Hide the icon that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Style for page content */
+.content {
+  padding: 14px;
+  font-size: 22px;
+}
+
+/* When the screen is less than 800 pixels wide */
+@media screen and (max-width: 800px) {
+  /* Hide all links, except for the selected tab */
+  .topnav a:not(.active) {
+    display: none;
+  }
+
+  /* Show the icon that should open and close the topnav */
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* When the screen is less than 800 pixels wide, if the user clicks on the icon */
+/* the "responsive" class attribute will be added to the topnav by the JavaScript code */
+/* This media query sets the style for the unfolded topnav */
+/* It makes the topnav look good on small screens (display the links vertically instead of horizontally)  */
+@media screen and (max-width: 800px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  
+}
+
+/* Dropdown in topnav */
+.topnav-item { position: relative; display: inline-block; }
+
+/* Make the dropbtn look like other nav links */
+.topnav-item .dropbtn {
+  display: block;
+  color: #080707;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* Dropdown content (hidden by default) */
+.topnav-item .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+  border: 1px solid #ddd;
+}
+
+/* Links inside dropdown */
+.topnav-item .dropdown-content a {
+  color: #000000;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+}
+
+/* Hover show */
+.topnav-item:hover .dropdown-content,
+.topnav-item:focus-within .dropdown-content {
+  display: block;
+}
+
+/* Hover/focus styles for items */
+.topnav-item .dropdown-content a:hover,
+.topnav-item .dropdown-content a:focus {
+  background-color: #f0f0f0;
+}
+
+/* Make sure dropdown doesn't break mobile responsive nav behavior; it will be hidden unless topnav shows it */
+@media screen and (max-width: 800px) {
+  .topnav-item .dropdown-content { position: static; box-shadow: none; border: none; }
+  .topnav-item .dropbtn { width: 100%; text-align: left; }
+}
